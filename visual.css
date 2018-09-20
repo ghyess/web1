@@ -1,0 +1,110 @@
+@charset "utf-8";
+/*  비쥬얼     */
+         #main {
+             width: 100%;
+             height: 100%;
+             overflow: hidden;
+             position: relative;
+             background-image: url(images/bg1.jpg);
+             background-repeat: no-repeat;
+}
+        .imgbox { 
+            width: 100%; 
+            height: 100%;
+            position: relative;
+            }
+        .imgbox .item {
+            width: 80%;
+            height: 100%;
+            position: relative;
+            margin: 0 auto;
+    }
+        .lBan, .rBan {
+            width: 55%;
+            height: auto;
+            top: 15%;
+            position: absolute;
+            opacity: 0.6;
+            transition: .8s;
+}
+        .lBan { left: 10%; }
+        .rBan { right: 10%; }
+        .item img { 
+            display: block;
+            width: 40%;
+            margin: 0 auto;
+}
+#main .item .lBan:hover { opacity: 1; }
+#main .item .rBan:hover { opacity: 1; }
+
+#main .item .titBox .tit { width: 100%; }
+#main .titBox { 
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    z-index: 90;
+    width: 55%;
+}
+#main .more { 
+    position: absolute;
+    width: 14%;
+    height: 6%;
+    border-radius: 10px;
+    left: 43%;
+    bottom: 7%;
+    z-index: 60;
+    box-shadow: 1px 1px 10px black;
+    line-height: 3.5;
+    font-weight: bold;
+    text-align: center;
+    background: #B79891;
+}
+
+/*    슬라이드    */
+#vs {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+}
+#vs .imgBox {
+    width: 200%;
+    height: 600px;
+    position: relative;
+}
+#vs .imgBox li {
+    width: 50%;
+    height: 600px;
+    float: left;
+    cursor: pointer;
+}
+
+/*    버튼 리스트    */
+#vs .btn_box {
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    z-index: 50;
+}
+#vs .btn_box .btn {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-image: url(images/btn_off.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 50;
+    cursor: pointer;
+    transition: .5s;
+}
+#vs .btn_box .btn.on {
+    background-image: url(images/btn_on.png);
+}
+
+#vs .btn_box .btn[data-value="0"] { left: 0; }
+#vs .btn_box .btn[data-value="1"] { left: 30%; }

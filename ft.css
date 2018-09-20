@@ -1,0 +1,101 @@
+@charset "utf-8";
+/*   푸터 영역 설정 */
+#ft {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 140px;
+    background: #2E2E2E;
+    box-sizing: border-box;
+}
+
+#fnb {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border-bottom: 1px solid #6E6E6E; 
+}
+#fnb ul {
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+}
+#fnb li {
+    float: left;
+    padding-right: 10px;
+}
+#fnb li a::after {
+    content: '　｜';
+    color: #848484;
+}
+#fnb li:last-child a::after {
+    content: '';
+}
+#fnb li a {
+    color: #848484;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 3;
+}
+#fnb a.active {
+    color:crimson;
+}
+
+#ft .address {
+    width: 300px;
+    height: 75px;
+    float: left;
+    margin-left: 8%;
+}
+#ft .fas {
+    font-size: 1.5em;
+    text-indent: 0;
+    margin-right: 10px;
+    color: #848484;
+    text-align: center;
+}
+#ft span {
+    text-indent: 5%;
+    color: #848484;
+    font-size: .8em;
+    font-weight: bold;
+    line-height: 1.8;
+}
+#ft .first {
+    margin-top: 13px;
+}
+#ft .sec {
+    margin-bottom: 13px;
+}
+#ft .ps {
+    width: 350px;
+    height: 75px;
+    float: left;
+}
+#ft .snsBox {
+    width: 300px;
+    height: 75px;
+    float: right;
+}
+#ft .sns {
+    font-size: 1.5em;
+    text-align: center;
+    color: #848484;
+    float: left;
+    margin: 10px;
+    line-height: 55px;
+}
+
+#ft .copy {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    border-top: 1px solid #848484;
+}
+#ft .copy span { 
+    text-align: center;
+    font-size: .7em;
+}

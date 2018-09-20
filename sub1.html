@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>oo에 오신 것을 환영합니다.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="commons.css">
+    <style>
+       @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+       @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+        .page:after { clear: both; }
+        #page1 {
+            background-image: url("./images/sub_m2.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+            width: 100%;
+            height: 90%;
+        }
+        #page2 {
+            background-image: url("./images/sub_bg1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #page3 {
+            background-image: url("./images/sub_bg2_size.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #page4 {
+            background-image: url("./images/sub_bg3.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+        
+        .proComent { 
+            color: #333;
+            text-align: center;
+            margin: 0px auto;
+            padding: 30px;
+            line-height: 2;
+            font-size: 18px;
+            text-shadow: 0 0 10px #F5ECCE;
+        }
+        .proTitle {
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 10px #DF3A01;
+        }
+        .pageTitle {
+            color: #333;
+            padding-top: 120px;
+            left: 3px;
+            text-shadow: 0 0 8px #F7BE81;
+        }
+        .page .left, .page .right {
+            position: absolute;
+            top: 220px;
+            z-index: 15;
+            display: block;
+            width: auto;
+            height: 40px;
+            background-repeat: no-repeat;
+            line-height: 2.5;
+            color: #bababa;
+        }
+        .page .left {
+            left: 150px;
+            padding-left: 60px;
+            background-position: left center;
+            background-image: url("./images/button_left.png");
+        }
+        .page .right {
+            right: 150px;
+            padding-right: 60px;
+            background-position: right center;
+            background-image: url("./images/button_right.png");
+        }
+        
+        .ckitem {
+            display: none;
+        }
+        .bread {
+            clear: both;
+            border-top: 1px solid #bababa;
+            border-top: 14px;
+            height: 42px;
+            width: 100%;
+            position: relative;
+            border-bottom: 1px solid #7f6650;
+        }
+        .bread .home, .bread .selcate, .bread .selcur {
+            display: block;
+            font-size: 16px;
+            padding: 0px 15px;
+            color: #333;
+            float: left;
+            line-height: 42px;
+            margin-left: 450px;
+        }
+        .bread .selcate, .bread .selcur {
+            padding-left: 10px;
+            margin-left: 0;
+        }
+        .bread .home:after, .bread .seclate:after {
+            content: " /";
+            padding-left: 15px;
+        }
+        .cate, .curpage {
+            position: relative;
+            float: left;
+        }
+        .cateGroup, .curGroup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 16;
+            background: #fff;
+            border: 1px solid #7f6650;
+            display: none;
+        }
+        .ckitem:checked ~ .cateGroup {
+            display: block;
+        }
+        .ckitem:checked ~ .curGroup {
+            display: block;
+        }
+        
+        .tbitem1, .tbitem2, .tbitem3 {
+            display: none;
+        }
+        .btnGroup {
+            clear: both;
+            width: 100%;
+            padding-left: 200px;
+            height: 100px;
+            border-bottom: 1px solid #7f6650;
+        }
+        .btnGroup li {
+            float: left;
+            margin: 35px;
+        }
+        .btnGroup label {
+            display: block;
+            padding: 0 20px;
+            line-height: 32px;
+            border-radius: 17px;
+            border: 1px solid #666;
+            color: #7f6650;
+            background: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .tbitem1:checked ~ .btnGroup .item1 label {
+            background: #7f6650;
+            color: #fff;
+            border: 1px solid #7f6650;
+        }
+         .tbitem2:checked ~ .btnGroup .item2 label {
+            background: #7f6650;
+            color: #fff;
+            border: 1px solid #7f6650;
+        }
+         .tbitem3:checked ~ .btnGroup .item3 label {
+            background: #7f6650;
+            color: #fff;
+            border: 1px solid #7f6650;
+        }
+        .conBox {
+            clear: both;
+            width: 100%;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="ft.css">
+    <script src="./css/html5shiv.js"></script>
+</head>
+<body>
+   <div class="wrap">
+    <header class="hd">
+       <!-- div.hdWrap>(nav.tnb>(ul.left>li*2>a)+(ul.light>li*4>a))+(nav.gub>(a.logo>img)+(ul#menu>li*5>a)+(a.lnk1>span)) -->
+        <div class="hdWrap">
+            <nav class="tnb">
+              <!--  <ul class="left">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul> -->
+                <ul class="right">
+                    <li><a href="login.html" class="login">로그인</a></li>
+                    <li><a href="join.html" class="join">회원가입</a></li>
+                </ul>
+            </nav>
+            <nav class="gnb">
+               <div class="gnb_inner">
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.png" alt="로고">
+                </a>
+                <ul id="menu">
+                    <li><a href="sub1.html">DALBOM COFFEE</a>
+                        <ul class="sub">
+                            <li><a href="sub1.html#page2">브랜드 소개</a></li>
+                            <li><a href="sub1.html#page3">서비스 마인드</a></li>
+                            <li><a href="sub1.html#page4">달봄 원두</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="menu.html">MENU</a>
+                        <ul class="sub">
+                            <li><a href="">커피</a></li>
+                            <li><a href="">에이드</a></li>
+                            <li><a href="">스무디</a></li>
+                            <li><a href="">식사류</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="event.html">EVENT</a>
+                        <ul class="sub">
+                            <li><a href="">진행중인 이벤트</a></li>
+                            <li><a href="">종료된 이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="customer.html">CUSTOMER REVIEW</a></li>
+                </ul>
+               <!-- <a href="" class="lnk1"><span></span></a> -->
+                </div>
+            </nav>
+        </div>
+     </header>
+    <section id="con">
+        <div class="page" id="page1">
+            <div class="pageWrap">
+                <h2 class="pageTitle"></h2>
+                  <div class="bread">
+                      <a href="" class="home">Home</a>
+                      <div class="cate">
+                        <input type="checkbox" id="cateck" class="ckitem">
+                        <label for="cateck" class="salcate">브랜드 소개</label>
+                        <ul class="cateGroup">
+                           <li><a href="sub1.html">DALBOM COFFEE</a></li>
+                           <li><a href="sub2.html">MENU</a></li>
+                           <li><a href="sub3.html">EVENT</a></li>
+                           <li><a href="sub4.html">CUSTOMER REVIEW</a></li>
+                        </ul>
+                      </div>
+                      <span class="curpage"></span>
+                          <input type="checkbox" id="curck" class="ckitem">
+                          <label for="curck" class="selcur">브랜드 소개</label>
+                          <ul class="curGroup">
+                              <li><a href="sub1.html#page2">브랜드 소개</a></li>
+                              <li><a href="sub1.html#page3">서비스 마인드</a></li>
+                              <li><a href="sub1.html#page4">달봄 원두</a></li>
+                          </ul>
+                  </div>
+                  <div id="tabGroup1">
+                      <input type="radio" name="tg1" class="tbitem1" id="tg1" checked>
+                      <input type="radio" name="tg1" class="tbitem2" id="tg2">
+                      <input type="radio" name="tg1" class="tbitem3" id="tg3">
+                      <ul class="btnGroup">
+                          <li class="item1">
+                              <label for="tg1" class="btn1">브랜드 소개</label>
+                          </li>
+                          <li class="item2">
+                              <label for="tg2" class="btn1">서비스 마인드</label>
+                          </li>
+                          <li class="item3">
+                              <label for="tg3" class="btn1">달봄 원두</label>
+                          </li>
+                      </ul>
+                  </div>
+            </div>
+        </div>
+        <div class="page" id="page2">
+          <div class="pageWrap">
+            <a href="sub1.html#page4" class="left">달봄 원두</a>
+            <h2 class="pageTitle">브랜드 소개</h2>
+            <a href="sub1.html#page2" class="right">서비스 마인드</a>
+                  <ul class="conBox">
+                         <li>
+                         <h2 class="proTitle">달봄은...</h2>
+                         <h3 class="proTitle"></h3>
+                         <p class="proComent">작년 5월부터 준비를 시작한 카페입니다. <br> 사계절 내내 달콤한 봄날의 커피를 가져다주는 것이 가게의 표어이며, 그에 알맞게 원두는 까다롭게 관리, 선별, 블렌딩 한 후 본연의 맛과 향을 살려 슬로우 로스팅 한 원두 제품만 공급 받아 고객님들에게 제공합니다. <br> 한국 소비자들의 취향과 입맛에 맞는 메뉴와 디저트, 베이커리로 구성하였습니다. <br> 매장 또한 넓고 쾌적한 공간으로 활기찬 느낌과 함께 갑갑하지 않도록 탁 트인 구성으로 꾸몄으며, 손님들이 커피를 마시며 잠시 쉬어가는 쉼터의 느낌을 주기 위해 하나 하나 신경쓴 인테리어로 매장을 가꿨습니다.</p>
+                      </li>
+                 </ul>
+         </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="pageWrap">
+                <a href="sub1.html#page2" class="left">브랜드 소개</a>
+                <h2 class="pageTitle"></h2>
+                <a href="sub1.html#page4" class="right">달봄 원두</a>
+            </div>
+        </div>
+                <div class="page" id="page4">
+            <div class="pageWrap">
+                <a href="sub1.html#page3" class="left">서비스 마인드</a>
+                <h2 class="pageTitle">달봄 원두</h2>
+                <a href="sub1.html#page2" class="right">브랜드 소개</a>
+                 <ul class="conBox">
+                     <li>
+                     <h2 class="proTitle">달봄은 생두 고유의 맛과 향미를 살리는-슬로우 로스팅 방식을 사용합니다.</h2>
+                     <h3 class="proTitle"></h3>
+                     <p class="proComent">블렌딩을 할 때에는 균일하게 로스팅을 하는 것이 중요하기 때문에 특유의 노하우가 필요합니다. <br>달봄은 잘 배합된 블렌딩 생두를 중강배전으로 슬로우 로스팅(Slow Roasting) 합니다. <br> 슬로우 로스팅(Slow Roasting)은 보통의 로스팅 시간 11~14분 보다 긴 15~18분 동안 중간 정도의 불세기로 천천히 로스팅하며 생두안의 수분을 자연스럽게 증발시키고, 안의 좋은 맛과 향미의 성분을 끌어내는 방식입니다. <br> 달봄의 블렌딩에 최적화 된 슬로우 로스팅(Slow Ro-asting)은 에스프레소의 탄맛이 적고 특유의 바디감과 쌉쌀한 맛을 깨워 내는데 가장 중요한 과정 중에 하나입니다.</p>
+                      </li>
+                 </ul>
+            </div>
+        </div>
+        <footer class="ft">
+            <div class="ftWrap">
+                <nav class="fnb">
+                    <ul>
+                        <li>
+                            <a href="">쿠폰현황</a>
+                        </li>
+                        <li>
+                            <a href="" class="active">개인정보 처리방침</a>
+                        </li>
+                        <li>
+                            <a href="">영상정보처리기기운영 관리방침</a>
+                        </li>
+                        <li>
+                            <a href="">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="">윤리신고센터</a>
+                        </li>
+                    </ul>
+                    <p class="cp">
+                        <span>Copyright 2018. GHYES All rights reserved.</span><br>
+                        <span>#대전광역시 유성구 지족북로 66번길 37 ｜</span>
+                        <span>포장 문의 등 전화번호 #070 8865 0830</span><br>
+                        <span>수제 뚱 마카롱 전문점（당일 방문포장만 가능합니다♥♥）</span>
+                        <span>포장:4구（8000원）／6구（12000원）개당 2000원</span>
+                    </p>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/?lang=ko" title="twitter">
+                            <img src="./images/sns1.png" alt="트위터">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com" title="facebook">
+                            <img src="./images/sns2.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/dalbom_coffee/" title="instagram">
+                            <img src="./images/sns3.png" alt="인스타그램">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </section>
+        <a href="index.html" class="toTop">
+            <span>TOP</span>
+        </a>
+    </div>
+</body>
+</html>

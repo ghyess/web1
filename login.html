@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>oo에 오신 것을 환영합니다.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="commons.css">
+    <style>
+       @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+       @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+        ::-webkit-scrollbar { display: none; }
+        body, html {
+            overflow-x: hidden;
+            -ms-overflow-style:none;
+        }
+        .page {
+            background-image: url("./images/sub_bg2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 500px;
+            height: 100%;
+        }
+        .pageWrap {
+            width: 700px;
+            height: 580px;
+            margin: 200px auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px #333;
+        }
+        .title {
+            text-align: center;
+            margin: 30px auto;
+            line-height: 2.2;
+            font-size: 32px;
+            font-family: "Kopub Batang";
+            color: #fff;
+            text-shadow: 2px 2px 5px #3B170B;
+            background: #7f6650;
+            width: 500px;
+        }
+        .frmFrame {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            clear: both;
+            border: 0;
+        }
+        .inItem {
+            display: block;
+            margin: 15px auto;
+            padding: 5px;
+            width: 500px;
+            height: 40px;
+            border-radius: 12px;
+        }
+        .frmBtn {
+            width: 150px;
+            height: 45px;
+            float: left;
+            margin: 15px;
+            background: #7f6650;
+            border: 0;
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            font-size: 11pt;
+            line-height: 2;
+        }
+          .frmBtnGroup a {
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            font-size: 11pt;
+            line-height: 3;
+        }
+
+        .frmComent {
+            clear: both;
+            float: left;
+            margin: 0 auto;
+            text-align: center;
+            color: #6E6E6E;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="ft.css">
+    <script src="./css/html5shiv.js"></script>
+</head>
+<body>
+   <div class="wrap">
+    <header class="hd">
+       <!-- div.hdWrap>(nav.tnb>(ul.left>li*2>a)+(ul.light>li*4>a))+(nav.gub>(a.logo>img)+(ul#menu>li*5>a)+(a.lnk1>span)) -->
+        <div class="hdWrap">
+            <nav class="tnb">
+              <!--  <ul class="left">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul> -->
+                <ul class="right">
+                    <li><a href="login.html" class="login">로그인</a></li>
+                    <li><a href="join.html" class="join">회원가입</a></li>
+                </ul>
+            </nav>
+            <nav class="gnb">
+               <div class="gnb_inner">
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.png" alt="로고">
+                </a>
+                <ul id="menu">
+                    <li><a href="sub1.html">DALBOM COFFEE</a>
+                        <ul class="sub">
+                            <li><a href="sub1.html#page2">브랜드 소개</a></li>
+                            <li><a href="sub1.html#page3">서비스 마인드</a></li>
+                            <li><a href="sub1.html#page4">달봄 원두</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="menu.html">MENU</a>
+                        <ul class="sub">
+                            <li><a href="">커피</a></li>
+                            <li><a href="">에이드</a></li>
+                            <li><a href="">스무디</a></li>
+                            <li><a href="">식사류</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="event.html">EVENT</a>
+                        <ul class="sub">
+                            <li><a href="">진행중인 이벤트</a></li>
+                            <li><a href="">종료된 이벤트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="customer.html">CUSTOMER REVIEW</a></li>
+                </ul>
+               <!-- <a href="" class="lnk1"><span></span></a> -->
+                </div>
+            </nav>
+        </div>
+     </header>
+    <section id="con">
+        <div class="page" id="page1">
+            <div class="pageWrap">
+               <h3 class="title">로그인</h3>
+                <form action="" class="frm1" id="login">
+                    <fieldset class="frmFrame">
+                        <input type="text" class="inItem" id="m_id" placeholder="아이디를 입력해주세요">
+                        <input type="passward" class="inItem" id="m_pw" placeholder="패스워드를 입력해주세요">
+                    </fieldset>
+                    <ul class="frmBtnGroup">
+                        <li><input type="submit" value="로그인" class="frmBtn"></li>
+                        <li><input type="reset" value="취소" class="frmBtn"></li>
+                        <li><a href="join.html" class="frmBtn">회원가입</a></li>
+                    </ul>
+                </form>
+                <section class="frmConBox">
+                    <p class="frmComent">
+                        회원가입시 사이즈업, 쿠폰적립 등 다양한 혜택을 제공해드리고 있습니다.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <footer class="ft">
+            <div class="ftWrap">
+                <nav class="fnb">
+                    <ul>
+                        <li>
+                            <a href="">쿠폰현황</a>
+                        </li>
+                        <li>
+                            <a href="" class="active">개인정보 처리방침</a>
+                        </li>
+                        <li>
+                            <a href="">영상정보처리기기운영 관리방침</a>
+                        </li>
+                        <li>
+                            <a href="">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="">윤리신고센터</a>
+                        </li>
+                    </ul>
+                    <p class="cp">
+                        <span>Copyright 2018. GHYES All rights reserved.</span><br>
+                        <span>#대전광역시 유성구 지족북로 66번길 37 ｜</span>
+                        <span>포장 문의 등 전화번호 #070 8865 0830</span><br>
+                        <span>수제 뚱 마카롱 전문점（당일 방문포장만 가능합니다♥♥）</span>
+                        <span>포장:4구（8000원）／6구（12000원）개당 2000원</span>
+                    </p>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/?lang=ko" title="twitter">
+                            <img src="./images/sns1.png" alt="트위터">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com" title="facebook">
+                            <img src="./images/sns2.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/dalbom_coffee/" title="instagram">
+                            <img src="./images/sns3.png" alt="인스타그램">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </section>
+        <a href="index.html" class="toTop">
+            <span>TOP</span>
+        </a>
+    </div>
+</body>
+</html>
